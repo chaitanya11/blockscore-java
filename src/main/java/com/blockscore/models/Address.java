@@ -3,26 +3,34 @@ package com.blockscore.models;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * The address model.
  */
 public class Address {
   @NotNull
+  @JsonProperty("address_street1")
   private String street1;
   
   @Nullable
+  @JsonProperty("address_street2")
   private String street2;
   
   @NotNull
+  @JsonProperty("address_city")
   private String city;
 
   @NotNull
+  @JsonProperty("address_subdivision")
   private String subdivision;
 
   @NotNull
+  @JsonProperty("address_postal_code")
   private String postalCode;
   
   @NotNull
+  @JsonProperty("address_country_code")
   private String countryCode;
 
 
@@ -183,4 +191,6 @@ public class Address {
   public String getCountryCode() {
     return countryCode;
   }
+
 }
+
